@@ -1,8 +1,8 @@
-package com.knowre.android
+package com.knowre.android.support
 
 import com.google.gson.Gson
 
-object GsonProvider {
+internal object GsonProvider {
 
     private val gson = Gson()
 

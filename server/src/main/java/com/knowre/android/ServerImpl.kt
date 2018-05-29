@@ -6,6 +6,8 @@ import android.os.Looper
 import com.knowre.android.dto.LessonsEnvelope
 import com.knowre.android.dto.LoginResponse
 import com.knowre.android.dto.Problem
+import com.knowre.android.support.GsonProvider
+import com.knowre.android.support.StringAssetParser
 
 
 class ServerImpl(context: Context) : Server {

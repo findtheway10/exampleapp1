@@ -1,9 +1,9 @@
-package com.knowre.android
+package com.knowre.android.support
 
 import android.content.Context
 import java.io.IOException
 
-class StringAssetParser(private val context: Context) {
+internal class StringAssetParser(private val context: Context) {
 
     @Throws(IOException::class)
     fun get(assetName: String): String {
