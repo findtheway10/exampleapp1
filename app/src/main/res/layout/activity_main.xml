@@ -43,9 +43,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
+    <Button
         android:id="@+id/do_login"
-        style="@style/GreenTextView"
+        style="@style/GreenButton"
         android:layout_width="424dp"
         android:layout_height="67dp"
         android:layout_marginBottom="188dp"

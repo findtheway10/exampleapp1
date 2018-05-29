@@ -6,12 +6,44 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:textColor">@color/_000000</item>
     </style>
 
-    <style name="GreenTextView"  parent="@android:style/Widget.TextView">
+    <style name="White" parent="@style/AppTheme">
+        <item name="android:windowBackground">@color/_FFFFFF</item>
+    </style>
+
+    <style name="NoActionBar" parent="@style/White">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="CenteredButton" parent="@android:style/Widget.Button">
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="GreenButton"  parent="@style/CenteredButton">
         <item name="android:background">@color/_38D579</item>
         <item name="android:textColor">@color/_FFFFFF</item>
-        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="BasicLessonButton"  parent="@style/CenteredButton">
+        <item name="android:background">@drawable/mode_lesson_background</item>
+        <item name="android:textColor">@color/_FFFFFF</item>
+    </style>
+
+    <style name="TestLessonButton"  parent="@style/CenteredButton">
+        <item name="android:background">@drawable/mode_test_background</item>
+        <item name="android:textColor">@color/_27B6F6</item>
+    </style>
+
+    <style name="LargeSizeTextView"  parent="@android:style/Widget.TextView">
+        <item name="android:textSize">24dp</item>
+    </style>
+
+    <style name="NormalSizeTextView"  parent="@android:style/Widget.TextView">
+        <item name="android:textSize">20dp</item>
     </style>
 
 </resources>

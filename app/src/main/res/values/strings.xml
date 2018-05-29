@@ -4,4 +4,14 @@
     <string name="do_login">로그인하기</string>
     <string name="id_edit_text_hint">아이디를 입력하세요</string>
     <string name="id_password_text_hint">패스워드를 입력하세요</string>
+
+    <string name="select_lesson">학습하고자 하는 레슨을 선택해주세요.</string>
+    <string name="no_lesson_selected">학습하고자 하는 레슨을 선택해주세요.</string>
+    <string name="lesson_selected_format">%1$d 레슨이 선택되었습니다.</string>
+    <string name="which_mode_do_you_want_study">어떤 모드로 학습을 진행하시겠습니까?</string>
+    <string name="lesson_mode_basic">기본학습</string>
+    <string name="lesson_mode_test">시험모드</string>
+    <string name="lesson_not_completed">학습</string>
+    <string name="lesson_completed">학습</string>
+    <string name="lesson_name_format">%1$d 레슨 - %2$s</string>
 </resources>
