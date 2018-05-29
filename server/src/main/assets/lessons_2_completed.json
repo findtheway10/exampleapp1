@@ -1,6 +1,5 @@
 {
-  "isCallSuccess": true,
-  "data": [
+  "lessons": [
     {
       "lessonNumber" : 1,
       "lessonName" : "덧셈",

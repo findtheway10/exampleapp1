@@ -1,6 +1,3 @@
 {
-  "isCallSuccess": true,
-  "data": {
-    "isLoginSuccess": true
-  }
+  "isLoginSuccess": true
 }

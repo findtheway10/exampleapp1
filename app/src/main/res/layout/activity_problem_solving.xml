@@ -77,10 +77,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:paddingBottom="40dp"
-        android:text="다음 덧셈을 계산하시오.\n\n3 + 1 = ?"
         app:layout_constraintEnd_toEndOf="@id/problem_solving_progress"
         app:layout_constraintStart_toEndOf="@id/problem_number_box"
-        app:layout_constraintTop_toTopOf="@id/problem_number_box" />
+        app:layout_constraintTop_toTopOf="@id/problem_number_box"
+        tools:text="다음 덧셈을 계산하시오.\n\n3 + 1 = ?" />
 
     <EditText
         android:id="@+id/answer_input"
