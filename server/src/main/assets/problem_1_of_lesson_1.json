@@ -1,0 +1,7 @@
+{
+  "isCallSuccess": true,
+  "data" : {
+    "problemContent": "다음 덧셈을 계산하시오.\n\n3 + 1 = ?",
+    "correctAnswer" : "4"
+  }
+}

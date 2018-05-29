@@ -1,0 +1,25 @@
+{
+  "isCallSuccess": true,
+  "data": [
+    {
+      "lessonNumber" : 1,
+      "lessonName" : "덧셈",
+      "isLessonCompleted" : false
+    },
+    {
+      "lessonNumber" : 2,
+      "lessonName" : "뺄셈",
+      "isLessonCompleted" : true
+    },
+    {
+      "lessonNumber" : 3,
+      "lessonName" : "곱셈",
+      "isLessonCompleted" : false
+    },
+    {
+      "lessonNumber" : 4,
+      "lessonName" : "나눗셈",
+      "isLessonCompleted" : false
+    }
+  ]
+}
