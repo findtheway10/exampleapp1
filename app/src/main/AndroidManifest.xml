@@ -11,7 +11,7 @@
         android:theme="@style/NoActionBar">
         <activity
             android:name=".MainActivity"
-            android:windowSoftInputMode="adjustResize">
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,7 +19,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".LessonSelectionActivity" />
-        <activity android:name=".ProblemSolvingActivity"></activity>
+        <activity
+            android:name=".ProblemSolvingActivity"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
     </application>
 
 </manifest>
