@@ -11,19 +11,19 @@
         android:layout_width="match_parent"
         android:layout_height="148dp"
         android:background="@color/_FFFFFF"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/lesson_content_background"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@color/_EAEAEA"
-        app:layout_constraintTop_toBottomOf="@id/top_header_background"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/top_header_background" />
 
     <TextView
         android:id="@+id/lesson_selection_description"
@@ -65,5 +65,16 @@
         android:text="@string/lesson_mode_test"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/basic_lesson" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/lesson_selection_recycler_view"
+        android:layout_width="732dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_header_background"
+        tools:listitem="@layout/view_for_single_lesson" />
 
 </android.support.constraint.ConstraintLayout>
