@@ -6,4 +6,53 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:layout_width="464dp"
+        android:layout_height="88dp"
+        android:layout_marginBottom="363dp"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/id_input" />
+
+    <EditText
+        android:id="@+id/id_input"
+        android:layout_width="424dp"
+        android:layout_height="67dp"
+        android:layout_marginBottom="20dp"
+        android:paddingStart="23dp"
+        android:background="@color/_EAEAEA"
+        android:hint="@string/id_edit_text_hint"
+        android:inputType="text"
+        android:maxLines="1"
+        app:layout_constraintBottom_toTopOf="@+id/password_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/password_input"
+        android:layout_width="424dp"
+        android:layout_height="67dp"
+        android:layout_marginBottom="70dp"
+        android:paddingStart="23dp"
+        android:background="@color/_EAEAEA"
+        android:hint="@string/id_password_text_hint"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        app:layout_constraintBottom_toTopOf="@+id/do_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/do_login"
+        style="@style/GreenTextView"
+        android:layout_width="424dp"
+        android:layout_height="67dp"
+        android:layout_marginBottom="188dp"
+        android:text="@string/do_login"
+        android:textSize="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </android.support.constraint.ConstraintLayout>

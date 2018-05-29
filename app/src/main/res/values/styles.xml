@@ -8,4 +8,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="GreenTextView"  parent="@android:style/Widget.TextView">
+        <item name="android:background">@color/_38D579</item>
+        <item name="android:textColor">@color/_FFFFFF</item>
+        <item name="android:gravity">center</item>
+    </style>
+
 </resources>
