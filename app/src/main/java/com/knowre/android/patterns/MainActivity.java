@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Toast;
 import com.knowre.android.Server;
 import com.knowre.android.ServerImpl;
+import com.knowre.android.dto.LoginResponse;
+import org.jetbrains.annotations.NotNull;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,13 +22,21 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.do_login).setOnClickListener(v -> {
             findViewById(R.id.io_progress).setVisibility(View.VISIBLE);
 
-            server.login("knowre", "1234", response -> {
-                findViewById(R.id.io_progress).setVisibility(View.GONE);
+            server.login("knowre", "1234", new Server.Callback<LoginResponse>() {
+                @Override
+                public void onResponse(LoginResponse response) {
+                    findViewById(R.id.io_progress).setVisibility(View.GONE);
 
-                if(response.isLoginSuccess) {
-                    startActivity(new Intent(this, LessonSelectionActivity.class));
-                } else {
-                    Toast.makeText(this, "login fail", Toast.LENGTH_SHORT).show();
+                    if(response.isLoginSuccess) {
+                        startActivity(new Intent(MainActivity.this, LessonSelectionActivity.class));
+                    } else {
+                        Toast.makeText(MainActivity.this, "login fail", Toast.LENGTH_SHORT).show();
+                    }
+                }
+
+                @Override
+                public void onFailure(@NotNull Throwable t) {
+
                 }
             });
         });
