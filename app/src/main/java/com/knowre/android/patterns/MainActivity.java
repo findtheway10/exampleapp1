@@ -18,10 +18,10 @@ public class MainActivity extends AppCompatActivity {
         final Server server = new ServerImpl(this);
 
         findViewById(R.id.do_login).setOnClickListener(v -> {
-            findViewById(R.id.io_progress_container).setVisibility(View.VISIBLE);
+            findViewById(R.id.io_progress).setVisibility(View.VISIBLE);
 
             server.login("knowre", "1234", response -> {
-                findViewById(R.id.io_progress_container).setVisibility(View.GONE);
+                findViewById(R.id.io_progress).setVisibility(View.GONE);
 
                 if(response.isLoginSuccess) {
                     startActivity(new Intent(this, LessonSelectionActivity.class));

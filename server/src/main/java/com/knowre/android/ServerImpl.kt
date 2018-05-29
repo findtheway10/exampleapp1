@@ -10,7 +10,7 @@ import com.knowre.android.dto.Problem
 
 class ServerImpl(context: Context) : Server {
 
-    private var networkLatencyInMillis = 5000L
+    private var networkLatencyInMillis = 1000L
 
     private val parser = StringAssetParser(context)
 
@@ -47,6 +47,12 @@ class ServerImpl(context: Context) : Server {
         handler.postDelayed({
             callback.onResponse(GsonProvider.get().fromJson(jsonString, Problem::class.java))
         }, networkLatencyInMillis)
+    }
+
+    fun setNetworkLatency(latencyInMillis: Long): ServerImpl {
+        networkLatencyInMillis = latencyInMillis
+
+        return this
     }
 
 }
