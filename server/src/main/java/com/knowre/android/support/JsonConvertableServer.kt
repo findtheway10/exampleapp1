@@ -1,9 +1,7 @@
 package com.knowre.android.support
 
 import android.content.Context
-import com.knowre.android.dto.LessonsEnvelope
-import com.knowre.android.dto.LoginResponse
-import com.knowre.android.dto.Problem
+import com.knowre.android.dto.*
 
 open class JsonConvertableServer(context: Context) {
 
@@ -25,6 +23,27 @@ open class JsonConvertableServer(context: Context) {
         val jsonString = parser.get("lessons_2_completed.json")
 
         return GsonProvider.get().fromJson(jsonString, LessonsEnvelope::class.java)
+    }
+
+    fun getLessonData(lessonType: LessonType, lessonNumber: Int): LessonData {
+        val jsonString = when(lessonType) {
+            LessonType.Basic -> when(lessonNumber) {
+                1 -> parser.get("basic_lesson_1_data.json")
+                2 -> parser.get("basic_lesson_2_data.json")
+                3 -> parser.get("basic_lesson_3_data.json")
+                4 -> parser.get("basic_lesson_4_data.json")
+                else -> throw IllegalArgumentException("lesson number cannot be over 4, it's [ $lessonNumber]")
+            }
+            LessonType.Test -> when(lessonNumber) {
+                1 -> parser.get("test_lesson_1_data.json")
+                2 -> parser.get("test_lesson_2_data.json")
+                3 -> parser.get("test_lesson_3_data.json")
+                4 -> parser.get("test_lesson_4_data.json")
+                else -> throw IllegalArgumentException("lesson number cannot be over 4, it's [ $lessonNumber]")
+            }
+        }
+
+        return GsonProvider.get().fromJson(jsonString, LessonData::class.java)
     }
 
     fun getProblem(lessonNumber: Int, problemNumber: Int): Problem {

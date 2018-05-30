@@ -3,9 +3,7 @@ package com.knowre.android
 import android.content.Context
 import android.os.Handler
 import android.os.Looper
-import com.knowre.android.dto.LessonsEnvelope
-import com.knowre.android.dto.LoginResponse
-import com.knowre.android.dto.Problem
+import com.knowre.android.dto.*
 import com.knowre.android.support.JsonConvertableServer
 
 
@@ -22,6 +20,12 @@ class ServerImpl(context: Context) : JsonConvertableServer(context), Server {
     override fun fetchLessonsEnvelope(callback: Server.Callback<LessonsEnvelope>) {
         handler.postDelayed({
             callback.onResponse(getLessonsEnvelope())
+        }, networkLatencyInMillis)
+    }
+
+    override fun fetchLessonData(lessonType: LessonType, lessonNumber: Int, callback: Server.Callback<LessonData>) {
+        handler.postDelayed({
+            callback.onResponse(getLessonData(lessonType, lessonNumber))
         }, networkLatencyInMillis)
     }
 

@@ -1,8 +1,6 @@
 package com.knowre.android
 
-import com.knowre.android.dto.LessonsEnvelope
-import com.knowre.android.dto.LoginResponse
-import com.knowre.android.dto.Problem
+import com.knowre.android.dto.*
 
 
 interface Server {
@@ -13,5 +11,6 @@ interface Server {
 
     fun login(id: String, password: String, callback: Callback<LoginResponse>)
     fun fetchLessonsEnvelope(callback: Callback<LessonsEnvelope>)
+    fun fetchLessonData(lessonType: LessonType, lessonNumber: Int, callback: Callback<LessonData>)
     fun fetchProblem(lessonNumber: Int, problemNumber: Int, callback: Callback<Problem>)
 }

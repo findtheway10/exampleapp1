@@ -1,9 +1,7 @@
 package com.knowre.android
 
 import android.content.Context
-import com.knowre.android.dto.LessonsEnvelope
-import com.knowre.android.dto.LoginResponse
-import com.knowre.android.dto.Problem
+import com.knowre.android.dto.*
 import com.knowre.android.support.JsonConvertableServer
 import io.reactivex.Single
 import java.util.concurrent.TimeUnit
@@ -16,6 +14,10 @@ class RxServerImpl(context: Context) : JsonConvertableServer(context), RxServer 
 
     override fun fetchLessonsEnvelope(): Single<LessonsEnvelope> {
         return Single.just(getLessonsEnvelope()).delay(networkLatencyInMillis, TimeUnit.MILLISECONDS)
+    }
+
+    override fun fetchLessonData(lessonType: LessonType, lessonNumber: Int): Single<LessonData> {
+        return Single.just(getLessonData(lessonType, lessonNumber)).delay(networkLatencyInMillis, TimeUnit.MILLISECONDS)
     }
 
     override fun fetchProblem(lessonNumber: Int, problemNumber: Int): Single<Problem> {
