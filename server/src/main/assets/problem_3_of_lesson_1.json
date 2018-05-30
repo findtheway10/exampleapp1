@@ -1,4 +1,5 @@
 {
+  "problemNumber" : 3,
   "problemContent": "다음 덧셈을 계산하시오.\n\n1034 + 3094 = ?",
   "correctAnswer" : "4128"
 }
