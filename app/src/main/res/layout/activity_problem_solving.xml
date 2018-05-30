@@ -116,6 +116,81 @@
         app:layout_constraintTop_toBottomOf="@id/check_answer"
         app:layout_goneMarginTop="24dp" />
 
+    <ImageView
+        android:id="@+id/first_problem_answer_result_oval"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="40dp"
+        android:src="@drawable/correct_oval"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/problem_number_box"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/first_problem_answer_result_number"
+        style="@style/NormalSizeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textColor="@color/_38D579"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/first_problem_answer_result_oval"
+        app:layout_constraintEnd_toEndOf="@id/first_problem_answer_result_oval"
+        app:layout_constraintStart_toStartOf="@id/first_problem_answer_result_oval"
+        app:layout_constraintTop_toTopOf="@id/first_problem_answer_result_oval"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/second_problem_answer_result_oval"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/in_correct_oval"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/first_problem_answer_result_oval"
+        app:layout_constraintStart_toEndOf="@id/first_problem_answer_result_oval"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/second_problem_answer_result_number"
+        style="@style/NormalSizeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2"
+        android:textColor="@color/_FF884D"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/second_problem_answer_result_oval"
+        app:layout_constraintEnd_toEndOf="@id/second_problem_answer_result_oval"
+        app:layout_constraintStart_toStartOf="@id/second_problem_answer_result_oval"
+        app:layout_constraintTop_toTopOf="@id/second_problem_answer_result_oval"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/third_problem_answer_result_oval"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/in_correct_oval"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/second_problem_answer_result_oval"
+        app:layout_constraintStart_toEndOf="@id/second_problem_answer_result_oval"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/third_problem_answer_result_number"
+        style="@style/NormalSizeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3"
+        android:textColor="@color/_FF884D"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/third_problem_answer_result_oval"
+        app:layout_constraintEnd_toEndOf="@id/third_problem_answer_result_oval"
+        app:layout_constraintStart_toStartOf="@id/third_problem_answer_result_oval"
+        app:layout_constraintTop_toTopOf="@id/third_problem_answer_result_oval"
+        tools:visibility="visible" />
+
     <Button
         android:id="@+id/proceed_next"
         android:layout_width="150dp"
