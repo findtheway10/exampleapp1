@@ -6,48 +6,28 @@ import android.os.Looper
 import com.knowre.android.dto.LessonsEnvelope
 import com.knowre.android.dto.LoginResponse
 import com.knowre.android.dto.Problem
-import com.knowre.android.support.GsonProvider
-import com.knowre.android.support.StringAssetParser
+import com.knowre.android.support.JsonConvertableServer
 
 
-class ServerImpl(context: Context) : Server {
-
-    private var networkLatencyInMillis = 1000L
-
-    private val parser = StringAssetParser(context)
+class ServerImpl(context: Context) : JsonConvertableServer(context), Server {
 
     private val handler = Handler(Looper.getMainLooper())
 
     override fun login(id: String, password: String, callback: Server.Callback<LoginResponse>) {
-        val jsonString = if (id == "knowre" && password == "1234") {
-            parser.get("login_success.json")
-        } else {
-            parser.get("login_fail.json")
-        }
-
         handler.postDelayed({
-            callback.onResponse(GsonProvider.get().fromJson(jsonString, LoginResponse::class.java))
+            callback.onResponse(getLoginResponse(id, password))
         }, networkLatencyInMillis)
     }
 
-    override fun getLessonsEnvelope(callback: Server.Callback<LessonsEnvelope>) {
-        val jsonString = parser.get("lessons_2_completed.json")
-
+    override fun fetchLessonsEnvelope(callback: Server.Callback<LessonsEnvelope>) {
         handler.postDelayed({
-            callback.onResponse(GsonProvider.get().fromJson(jsonString, LessonsEnvelope::class.java))
+            callback.onResponse(getLessonsEnvelope())
         }, networkLatencyInMillis)
     }
 
-    override fun getProblem(lessonNumber: Int, problemNumber: Int, callback: Server.Callback<Problem>) {
-        val jsonString = when (problemNumber) {
-            1 -> parser.get("problem_1_of_lesson_1.json")
-            2 -> parser.get("problem_1_of_lesson_2.json")
-            3 -> parser.get("problem_1_of_lesson_3.json")
-            else -> throw IllegalArgumentException("problem number cannot be over 3. it was [ $problemNumber ]")
-        }
-
+    override fun fetchProblem(lessonNumber: Int, problemNumber: Int, callback: Server.Callback<Problem>) {
         handler.postDelayed({
-            callback.onResponse(GsonProvider.get().fromJson(jsonString, Problem::class.java))
+            callback.onResponse(getProblem(lessonNumber, problemNumber))
         }, networkLatencyInMillis)
     }
 
