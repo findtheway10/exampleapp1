@@ -30,8 +30,8 @@ open class JsonConvertableServer(context: Context) {
     fun getProblem(lessonNumber: Int, problemNumber: Int): Problem {
         val jsonString = when (problemNumber) {
             1 -> parser.get("problem_1_of_lesson_1.json")
-            2 -> parser.get("problem_1_of_lesson_2.json")
-            3 -> parser.get("problem_1_of_lesson_3.json")
+            2 -> parser.get("problem_2_of_lesson_1.json")
+            3 -> parser.get("problem_3_of_lesson_1.json")
             else -> throw IllegalArgumentException("problem number cannot be over 3. it was [ $problemNumber ]")
         }
 
