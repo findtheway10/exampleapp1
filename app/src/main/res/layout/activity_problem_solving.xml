@@ -116,44 +116,16 @@
         app:layout_constraintTop_toBottomOf="@id/check_answer"
         app:layout_goneMarginTop="24dp" />
 
-    <TextView
-        android:id="@+id/first_problem_answer_result_number"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/problem_solving_result_tag_recycler_view"
         style="@style/NormalSizeTextView"
-        android:layout_width="50dp"
+        android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_marginBottom="40dp"
         android:background="@drawable/correct_oval"
-        android:gravity="center"
-        android:text="1"
-        android:textColor="@color/_38D579"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@id/problem_solving_progress" />
-
-    <TextView
-        android:id="@+id/second_problem_answer_result_number"
-        style="@style/NormalSizeTextView"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="20dp"
-        android:background="@drawable/in_correct_oval"
-        android:gravity="center"
-        android:text="2"
-        android:textColor="@color/_FF884D"
-        app:layout_constraintStart_toEndOf="@id/first_problem_answer_result_number"
-        app:layout_constraintTop_toTopOf="@id/first_problem_answer_result_number" />
-
-    <TextView
-        android:id="@+id/third_problem_answer_result_number"
-        style="@style/NormalSizeTextView"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="@drawable/in_correct_oval"
-        android:gravity="center"
-        android:text="3"
-        android:textColor="@color/_FF884D"
-        android:layout_marginStart="20dp"
-        app:layout_constraintStart_toEndOf="@id/second_problem_answer_result_number"
-        app:layout_constraintTop_toTopOf="@id/second_problem_answer_result_number" />
+        app:layout_constraintStart_toStartOf="@id/problem_solving_progress"
+        tools:listitem="@layout/view_problem_solving_result_tag"/>
 
     <Button
         android:id="@+id/proceed_next"
