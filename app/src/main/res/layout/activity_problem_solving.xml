@@ -10,12 +10,12 @@
     tools:context=".ProblemSolvingActivity">
 
     <TextView
-        android:id="@+id/problem_solving_state_title"
+        android:id="@+id/lesson_title"
         style="@style/LargeSizeTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="@string/problem_solving_state_title"
+        android:text="@string/lesson_title_format"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -32,7 +32,7 @@
         android:progress="1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/problem_solving_state_title" />
+        app:layout_constraintTop_toBottomOf="@id/lesson_title" />
 
     <TextView
         android:id="@+id/problem_number_box"
