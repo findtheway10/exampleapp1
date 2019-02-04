@@ -28,6 +28,10 @@
         <item name="android:textColor">@color/_FFFFFF</item>
     </style>
 
+    <style name="DisabledButton"  parent="@style/CenteredButton">
+        <item name="android:background">@color/_EAEAEA</item>
+    </style>
+
     <style name="BasicLessonButton"  parent="@style/CenteredButton">
         <item name="android:background">@drawable/mode_lesson_background</item>
         <item name="android:textColor">@color/_FFFFFF</item>

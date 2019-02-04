@@ -1,4 +1,4 @@
-package com.knowre.android.patterns;
+package com.knowre.android.patterns.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,8 @@ import android.widget.Toast;
 import com.knowre.android.Server;
 import com.knowre.android.ServerImpl;
 import com.knowre.android.dto.LoginResponse;
+import com.knowre.android.patterns.R;
+
 import org.jetbrains.annotations.NotNull;
 
 public class MainActivity extends AppCompatActivity {

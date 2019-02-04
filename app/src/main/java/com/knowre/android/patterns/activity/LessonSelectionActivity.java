@@ -1,8 +1,10 @@
-package com.knowre.android.patterns;
+package com.knowre.android.patterns.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+
+import com.knowre.android.patterns.R;
 
 public class LessonSelectionActivity extends AppCompatActivity {
 

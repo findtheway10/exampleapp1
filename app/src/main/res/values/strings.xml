@@ -25,4 +25,12 @@
     <string name="time_expired">시간만료</string>
     <string name="time_remain">남음</string>
     <string name="test_time_format">%1$d:%1$d</string> <!-- ex) 00:00 -->
+
+    <string name="lesson_title_format_default">레슨</string>
+    <string name="lesson_type_basic">기본</string>
+    <string name="lesson_type_test">테스트</string>
+
+
+
+
 </resources>
