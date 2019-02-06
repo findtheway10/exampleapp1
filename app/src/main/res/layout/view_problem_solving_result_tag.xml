@@ -23,7 +23,7 @@
             android:background="@{answer.isCorrect ? @drawable/correct_oval : @drawable/in_correct_oval}"
             android:gravity="center"
             android:text="@{String.valueOf(answer.problemNumber)}"
-            android:textColor="@color/_38D579" />
+            android:textColor="@{answer.isCorrect ? @color/_38D579 : @color/_FF884D}" />
 
     </android.support.constraint.ConstraintLayout>
 </layout>
