@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <TextView
-        android:id="@+id/problem_answer_result_number"
-        style="@style/NormalSizeTextView"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="@drawable/correct_oval"
-        android:gravity="center"
-        android:text="1"
-        android:textColor="@color/_38D579" />
+    <data>
+        <variable
+            name="answer"
+            type="com.knowre.android.patterns.model.AnswerItem" />
+    </data>
 
-</android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/problem_answer_result_number"
+            style="@style/NormalSizeTextView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@{answer.isCorrect ? @drawable/correct_oval : @drawable/in_correct_oval}"
+            android:gravity="center"
+            android:text="@{String.valueOf(answer.problemNumber)}"
+            android:textColor="@color/_38D579" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

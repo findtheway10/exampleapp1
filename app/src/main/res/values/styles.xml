@@ -30,6 +30,7 @@
 
     <style name="DisabledButton"  parent="@style/CenteredButton">
         <item name="android:background">@color/_EAEAEA</item>
+        <item name="android:textColor">@color/_9C9C9C</item>
     </style>
 
     <style name="BasicLessonButton"  parent="@style/CenteredButton">
